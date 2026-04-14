@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #132a4a;
+    --navy-dark: #0a1929;
+    --accent: #0d45fe;
+    --bg: #f5f7fa;
+    --text: #1a2332;
+    --card: #ffffff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
