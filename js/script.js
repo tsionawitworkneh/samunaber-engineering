@@ -52,3 +52,4 @@ function goTo(index) {
 setInterval(() => {
   goTo((current + 1) % slides.length);
 }, 5000);
+
