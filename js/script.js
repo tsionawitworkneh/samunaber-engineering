@@ -63,12 +63,12 @@ const teamCards = document.querySelectorAll('.team-card');
 let currentIndex = 0;
 
 function updateSlider() {
-    // Check if we are on mobile (screen width < 768px)
+    
     if (window.innerWidth <= 768) {
         const cardWidth = teamCards[0].offsetWidth + 20; // Card width + gap
         teamGrid.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
     } else {
-        // Reset transform if user resizes back to desktop
+        
         teamGrid.style.transform = `translateX(0)`;
     }
 }
@@ -77,7 +77,7 @@ nextBtn.addEventListener('click', () => {
     if (currentIndex < teamCards.length - 1) {
         currentIndex++;
     } else {
-        currentIndex = 0; // Loop back to start
+        currentIndex = 0; 
     }
     updateSlider();
 });
@@ -86,10 +86,10 @@ prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
     } else {
-        currentIndex = teamCards.length - 1; // Loop to end
+        currentIndex = teamCards.length - 1; 
     }
     updateSlider();
 });
 
-// Handle window resize to prevent layout breaking
+
 window.addEventListener('resize', updateSlider);
