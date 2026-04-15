@@ -93,3 +93,39 @@ prevBtn.addEventListener('click', () => {
 
 
 window.addEventListener('resize', updateSlider);
+
+// ===== LOGO SCROLLER =====
+
+const track = document.getElementById('logoTrack');
+
+
+const cards = Array.from(track.children);
+cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+});
+
+let scrollAmount = 0;
+const speed = 0.5; 
+
+function animate() {
+    scrollAmount -= speed;
+    
+    
+    if (Math.abs(scrollAmount) >= track.scrollWidth / 2) {
+        scrollAmount = 0; 
+    }
+    
+    track.style.transform = `translateX(${scrollAmount}px)`;
+    
+    requestAnimationFrame(animate);
+}
+
+
+animate();
+
+
+let isPaused = false;
+track.addEventListener('mouseenter', () => speed = 0); 
+
+track.onmouseover = () => { cancelAnimationFrame(animationID); }; 
