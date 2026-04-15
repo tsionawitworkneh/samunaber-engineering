@@ -416,7 +416,7 @@ body {
 
 
 .team-section {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background: #f5f7fa;
   font-family: 'Open Sans', sans-serif;
 }
@@ -614,18 +614,36 @@ body {
 
   .top-bar-left {
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
   }
 
-  .hero-content {
-    padding: 60px 20px;
+  .hero {
+    min-height: 80vh; 
+    text-align: center;
   }
+  .hero-content {
+    padding: 40px 20px;
+    margin: 0 auto;
+  }
+  
 
 
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .about-image img {
+    height: 300px; 
+    width: 100%;
+    object-position: center; 
+  }
+  .experience-badge {
+    padding: 15px;
+    right: 10px;
+    bottom: -15px;
+  }
+  .exp-number { font-size: 2rem; }
 
   .stats-grid {
     grid-template-columns: 1fr 1fr;
@@ -642,10 +660,17 @@ body {
     display: flex;
     grid-template-columns: none;
     transition: transform 0.5s ease-in-out;
-    gap: 20px;
+    gap: 15px;
   }
 
   .team-card {
-    flex: 0 0 100%;
+    flex: 0 0 100%; 
+    max-width: 100%;
   }
+
+  .team-img-wrap {
+    height: 280px; 
+  }
+
 }
+
