@@ -904,6 +904,91 @@ body {
 }
 
 
+.footer {
+  background: var(--navy-dark);
+  color: var(--text-muted);
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-logo{
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+
+.footer h4 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+  font-size: .95rem;
+}
+
+.footer ul li i {
+  color: var(--accent);
+  margin-right: 8px;
+  font-size: .75rem;
+}
+
+.footer ul a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.footer ul a:hover {
+  color: var(--accent);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, .2);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.footer-socials a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: .9rem;
+  color: rgba(255, 255, 255, .4);
+}
+
+
+
 
 /* Media Queries */
 
@@ -980,6 +1065,14 @@ body {
     object-position: center 10% !important; 
   }
 
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer {
+    padding: 40px 0 0;
+  }
 
 }
 
@@ -1117,6 +1210,24 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 12px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -1136,4 +1247,14 @@ body {
   .story-title {
     font-size: 24px;
   }
+
+  .footer {
+    padding: 30px 0 0;
+  }
+
+  .footer-grid {
+    gap: 20px;
+  }
+
+  
 }
