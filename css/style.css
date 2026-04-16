@@ -581,7 +581,7 @@ body {
   cursor: pointer;
 }
 
-/* ===== COMPANY STORY SECTION ===== */
+
 .company-story {
   padding: 80px 0;
   background: #ffffff;
@@ -682,47 +682,109 @@ body {
   object-fit: contain;
 }
 
-/* ===== MEDIA QUERIES ===== */
-@media (max-width: 992px) {
-  .story-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .story-title {
-    font-size: 34px;
-  }
+.services {
+  padding: 100px 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .company-story {
-    padding: 60px 20px;
-  }
-
-  .story-image {
-    height: 350px;
-  }
-
-  .story-title {
-    font-size: 28px;
-  }
-
-  .story-text {
-    font-size: 15px;
-  }
-
-  .story-image-border {
-    bottom: -10px;
-    left: -10px;
-  }
+.services-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: .05;
+  background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+  background-size: 40px 40px;
 }
 
-@media (max-width: 480px) {
-  .story-title {
-    font-size: 24px;
-  }
+.services .container {
+  position: relative;
+  z-index: 2;
 }
 
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.section-header .section-tag {
+  color: var(--accent);
+}
+
+.section-header h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 12px 0 16px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(255, 255, 255, .1);
+  padding: 40px 32px;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  background: var(--accent);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 69, 254, .2);
+  margin-bottom: 24px;
+  transition: background .5s;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(255, 255, 255, .2);
+}
+
+.service-icon i {
+  font-size: 1.8rem;
+  color: var(--accent);
+  transition: color .5s;
+}
+
+.service-card:hover .service-icon i {
+  color: #fff;
+}
+
+.service-card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  transition: color .5s;
+}
+
+.service-card:hover p {
+  color: rgba(255, 255, 255, .9);
+}
 
 /* Media Queries */
 
@@ -764,6 +826,15 @@ body {
 
   .about-text {
     text-align: left;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-title {
+    font-size: 34px;
   }
 
   .team-grid {
@@ -860,6 +931,27 @@ body {
     font-size: 2rem;
   }
 
+  .company-story {
+    padding: 60px 20px;
+  }
+
+  .story-image {
+    height: 350px;
+  }
+
+  .story-title {
+    font-size: 28px;
+  }
+
+  .story-text {
+    font-size: 15px;
+  }
+
+  .story-image-border {
+    bottom: -10px;
+    left: -10px;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -871,11 +963,11 @@ body {
 
    .team-grid {
     display: flex;
-    flex-direction: row !important; /* Forces horizontal for mobile */
+    flex-direction: row !important; 
     grid-template-columns: none; 
     transition: transform 0.5s ease-in-out;
     gap: 15px;
-    padding: 0 0%; /* Adds a little breathing room on the sides */
+    padding: 0 0%; 
   }
 
 
@@ -912,5 +1004,9 @@ body {
 
   .exp-number {
     font-size: 2rem;
+  }
+
+  .story-title {
+    font-size: 24px;
   }
 }
