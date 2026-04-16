@@ -667,12 +667,12 @@ body {
   width: 300px;
   height: 200px;
   background: #fff;
-  margin: 30px 20px;
+  margin: 15px 20px;
   border-radius: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 25px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
 }
 
@@ -687,6 +687,7 @@ body {
   background: var(--navy);
   position: relative;
   overflow: hidden;
+  margin-top: 10rem;
 }
 
 .services-pattern {
@@ -712,7 +713,7 @@ body {
   color: var(--accent);
 }
 
-.section-header h2 {
+.services .section-header h2 {
   font-family: 'Rajdhani', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 700;
@@ -785,6 +786,124 @@ body {
 .service-card:hover p {
   color: rgba(255, 255, 255, .9);
 }
+
+.contact {
+  padding: 100px 0;
+  background: #fff;
+}
+
+
+.contact-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.contact-header h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin: 12px 0 16px;
+}
+
+.contact-header p {
+  color: #555;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-item i {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--navy-dark);
+  margin-bottom: 2px;
+}
+
+.contact-item span {
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(13, 69, 254, 0.3);
+  transition: all 0.3s ease;
+}
+
+
+.contact-form button.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 69, 254, 0.4);
+}
+
+
 
 /* Media Queries */
 
@@ -988,6 +1107,14 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
 }
