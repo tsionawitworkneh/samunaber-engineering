@@ -664,8 +664,8 @@ body {
 
 .logo-card {
   flex: 0 0 auto;
-  width: 240px;
-  height: 140px;
+  width: 300px;
+  height: 200px;
   background: #fff;
   margin: 30px 20px;
   border-radius: 20px; 
