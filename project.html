@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Detail</title>
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  
+  <section class="project-hero">
+    <p id="project-category" class="eyebrow"></p>
+    <h1 id="project-title"></h1>
+    <p id="project-client" class="client"></p>
+    <a href="./index.html#projects" class="back-link">← Back to Projects</a>
+  </section>
+
+  
+  <section class="project-overview">
+    <div class="container overview-grid">
+      <div class="overview-text">
+        <h2>Overview</h2>
+        <p id="project-overview-text"></p>
+      </div>
+      <div class="highlights-card">
+        <h3>Key Highlights</h3>
+        <ul id="project-highlights"></ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="project-gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div id="project-gallery" class="gallery-grid"></div>
+    </div>
+  </section>
+
+ 
+  <section class="other-projects">
+    <div class="container">
+      <h2>Other Projects</h2>
+      <div id="other-projects" class="other-grid"></div>
+    </div>
+  </section>
+
+  
+  <div id="lightbox" class="lightbox" hidden>
+    <img id="lightbox-img" class="lightbox-img" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+    <button id="lightbox-close" class="lightbox-close">&times;</button>
+    <button id="lightbox-prev" class="lightbox-prev">&#8592;</button>
+    <button id="lightbox-next" class="lightbox-next">&#8594;</button>
+  </div>
+
+  
+  
+
+  
+  <script src="js/projects-data.js"></script>
+  <script src="js/project-loader.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>

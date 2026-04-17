@@ -787,6 +787,107 @@ body {
   color: rgba(255, 255, 255, .9);
 }
 
+.projects {
+  padding: 100px 0;
+}
+
+.projects .section-header h2 {
+  color: var(--navy-dark);
+}
+
+.projects .section-header p {
+  color: #555;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.project-card {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.project-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.gradient-1 {
+  background: linear-gradient(135deg, var(--navy-dark), var(--accent));
+}
+
+.gradient-2 {
+  background: linear-gradient(135deg, var(--accent), var(--navy-dark));
+}
+
+.gradient-3 {
+  background: linear-gradient(135deg, var(--navy-dark), var(--accent));
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 25, 41, .3);
+  transition: background .5s;
+}
+
+.project-card:hover .project-overlay {
+  background: rgba(10, 25, 41, .1);
+}
+
+.project-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.project-category {
+  color: var(--accent);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.project-category{
+  color: var(--text);
+}
+
+.project-content h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.project-link {
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap .3s;
+}
+
+.project-card:hover .project-link {
+  gap: 16px;
+}
+
 .contact {
   padding: 100px 0;
   background: #fff;
